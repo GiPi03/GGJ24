@@ -6,16 +6,42 @@ public class Weapon : MonoBehaviour
 {
     public GameObject bullet;
     public Transform shootPoint;
+    public float shots = 0;
+    public float magazine = 10;
+
+    bool isreloading;
+    
    
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Mouse0))
+        if (Input.GetKeyDown(KeyCode.Mouse0) && !isreloading)
+        {
             Shoot();
+         
+        }
+        
+        if (shots == magazine)
+        {
+            isreloading = true;
+           
+           StartCoroutine (Reload());
+        }
     }
+      
     void Shoot()
     {
         GameObject bulletInstance = Instantiate(bullet, shootPoint.position,transform.rotation);
         bulletInstance.GetComponent<Rigidbody2D>().AddForce(-transform.right * 1000);
+        Destroy (bulletInstance, 5);
+        shots++;
+        
+    }
+    IEnumerator Reload()
+    {
+        shots = 0;
+        yield return new WaitForSeconds(3);
+        isreloading = false;
+       
     }
 }
