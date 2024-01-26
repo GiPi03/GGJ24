@@ -13,7 +13,7 @@ public class Weapon : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Mouse0))
             Shoot();
     }
-    void Shoot()
+    public virtual void Shoot()
     {
         GameObject bulletInstance = Instantiate(bullet, shootPoint.position,transform.rotation);
         bulletInstance.GetComponent<Rigidbody2D>().AddForce(-transform.right * 1000);

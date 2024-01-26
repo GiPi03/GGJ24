@@ -20,5 +20,7 @@ public class Movement : MonoBehaviour
         Vector3 movement = new Vector3(horizontal, vertical, 0) * speed * Time.deltaTime;
         //Anwenden der Bewegung auf das Objekt.
         transform.Translate(movement);
+
     }
+   
 }
