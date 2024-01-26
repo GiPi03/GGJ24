@@ -5,16 +5,20 @@ using UnityEngine.Rendering;
 
 public class Movement : MonoBehaviour
 {
+    //Initialsierung der Globalen Variablen
+    //Geschwindigkeit
     public float speed = 10f;
-    public float acceleration = 20f;
-    public float maxSpeed = 15f;
 
     void Update()
     {
-        float horizontal = Input.GetAxisRaw("Horizontal");
-        float vertical = Input.GetAxisRaw("Vertical");
+        //Get Input.
+        //Input.GetAxis("Horizontal") gibt einen Wert zwischen -1, 0 oder 1 zurück, je nachdem ob die Taste gedrückt ist.
+        float horizontal = Input.GetAxis("Horizontal");
+        float vertical = Input.GetAxis("Vertical");
+
+        //Speichern des Inputs in einem Vector3 und Multiplizieren mit der Geschwindigkeit und der Zeit zwischen einem Frame.
         Vector3 movement = new Vector3(horizontal, vertical, 0) * speed * Time.deltaTime;
-        Debug.Log(movement);
+        //Anwenden der Bewegung auf das Objekt.
         transform.Translate(movement);
     }
 }

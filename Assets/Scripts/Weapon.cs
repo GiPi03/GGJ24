@@ -4,15 +4,18 @@ using UnityEngine;
 
 public class Weapon : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
+    public GameObject bullet;
+    public Transform shootPoint;
+   
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.Mouse0))
+            Shoot();
+    }
+    void Shoot()
+    {
+        GameObject bulletInstance = Instantiate(bullet, shootPoint.position,transform.rotation);
+        bulletInstance.GetComponent<Rigidbody2D>().AddForce(-transform.right * 1000);
     }
 }
