@@ -2,11 +2,34 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GiSchwanz : Weapon
+public class GiSchwanz : MonoBehaviour
 {
-    public override void Shoot()
+    public int health;
+    public int maxHealth = 100;
+
+    private void Start()
     {
-        base.Shoot();
+        health = maxHealth;
+    }
+
+    public void SubHealth(int amount)
+    {
+        if(health - amount <= 0)
+        {
+            Destroy(gameObject);
+            return;
+        }
+        health -= amount;
+    }
+    public void AddHealth(int amount)
+    {
+        if(health  + amount >= maxHealth)
+        {
+            health = maxHealth;
+            return;
+        }
+        health += amount;
 
     }
+    
 }
