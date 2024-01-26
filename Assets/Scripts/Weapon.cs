@@ -10,8 +10,11 @@ public class Weapon : MonoBehaviour
     public float magazine = 10;
 
     bool isreloading;
-    
    
+    
+
+
+
     // Update is called once per frame
 
     //Wenn Linksklick dann nicht dauerschieﬂen
@@ -21,48 +24,43 @@ public class Weapon : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Mouse0) && !isreloading)
         {
+            
             Shoot();
-         
+            
         }
-        if (Input.GetKey(KeyCode.Mouse0))
-        {
-           StartCoroutine (Repetieren());
-        }
-        
+
+   
+
         if (Input.GetKeyDown(KeyCode.R))
         {
             isreloading = true;
 
-            StartCoroutine (Reload());
+            StartCoroutine(Reload());
         }
+     
 
         if (shots == magazine)
         {
             isreloading = true;
-           
-           StartCoroutine (Reload());
+
+            StartCoroutine(Reload());
         }
     }
-      
+
     void Shoot()
     {
-        GameObject bulletInstance = Instantiate(bullet, shootPoint.position,transform.rotation);
+        GameObject bulletInstance = Instantiate(bullet, shootPoint.position, transform.rotation);
         bulletInstance.GetComponent<Rigidbody2D>().AddForce(-transform.right * 1000);
-        Destroy (bulletInstance, 5);
+        Destroy(bulletInstance, 5);
         shots++;
-        
+
     }
     IEnumerator Reload()
     {
         shots = 0;
         yield return new WaitForSeconds(3);
         isreloading = false;
-       
+
     }
-    IEnumerator Repetieren()
-            {
-                yield return new WaitForSeconds(0.5f);
-                 Shoot();
-            }
-           
+   
 }
