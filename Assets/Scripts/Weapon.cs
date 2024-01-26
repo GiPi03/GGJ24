@@ -21,6 +21,13 @@ public class Weapon : MonoBehaviour
          
         }
         
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            isreloading = true;
+
+            StartCoroutine (Reload());
+        }
+
         if (shots == magazine)
         {
             isreloading = true;
