@@ -178,3 +178,54 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+  m_Radius: 0.5
+--- !u!114 &855425266292253706
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 255545890601604253}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 750f2e47fc21c154cbdafd3c6211f8cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bullets:
+  - {fileID: 21300000, guid: 3eb2086a31bac194ab523f28e04e7b8b, type: 3}
+  - {fileID: 21300000, guid: 5816c77b0e0cdcf4985fd199f456c319, type: 3}
+  - {fileID: 21300000, guid: ce3f9766647c01c44b39d4ced9699937, type: 3}
+  - {fileID: 21300000, guid: b387da275d3524340b154ca07265a002, type: 3}
+  - {fileID: 21300000, guid: 33f924e803b220b458ec190a8c1101ea, type: 3}
+  damage: 40
+--- !u!114 &7162415336352771277
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 255545890601604253}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 299230564
+      Data2: 1248928405
+      Data3: 1345614520
+      Data4: -112364170
+    Path: event:/SFX/Wand_shooting
+  Event: 
+  PlayEvent: 1
+  StopEvent: 2
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
