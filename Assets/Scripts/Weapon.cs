@@ -21,14 +21,16 @@ public class Weapon : MonoBehaviour
     bool drei;
     bool rclick;
 
+    int count = 0;
+
     private float originalEmissionRate;
 
 
 
     private void Start()
     {
-        
-        
+
+
     }
 
 
@@ -47,27 +49,32 @@ public class Weapon : MonoBehaviour
         }
         if (Input.GetKey(KeyCode.Mouse1))
         {
-          
+
 
             Timer += Time.deltaTime;
-            ps.Emit(2);
-            if (Timer >= holdTime) 
+            if (count < 3)
+            {
+                ps.Emit(1);
+                count = 0;
+            }
+            count++;
+            if (Timer >= holdTime)
             {
                 drei = true;
                 Timer = 0;
             }
 
         }
-       
+
 
 
         if (Input.GetKeyUp(KeyCode.Mouse1) && drei) //Rechtsklick 3fach Schuss
         {
-            
-            
+
+
             StartCoroutine(RClick(3));
             drei = false;
-            
+
         }
 
         if (Input.GetKeyDown(KeyCode.R))

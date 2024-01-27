@@ -321,7 +321,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 1
+  m_UiScaleMode: 0
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 1920, y: 1080}
@@ -858,6 +858,7 @@ MonoBehaviour:
   - {fileID: 6936878267753519378, guid: a7a5bc1650a815e40aca92eb3b69e03b, type: 3}
   - {fileID: 8849158979689625702, guid: 68fc21669df2006468ee071659802d69, type: 3}
   - {fileID: 7468399981636804988, guid: ef210dc5f36f59e42961c14a3aa7dc7d, type: 3}
+  spawnEnemy: 10
 --- !u!4 &1641832004
 Transform:
   m_ObjectHideFlags: 0
