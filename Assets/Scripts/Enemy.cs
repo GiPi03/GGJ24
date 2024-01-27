@@ -10,7 +10,7 @@ public class Enemy : MonoBehaviour
     public AIPath aiPath;
     public float speed = 10f;
     public AIDestinationSetter aiDestinationSetter;
-    float intTimer = 0;
+   
     public float attackSpeed = 1f;
     private float attackTimer = 0f;
     bool canAttack = true;
