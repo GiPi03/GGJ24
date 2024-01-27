@@ -768,7 +768,9 @@ MonoBehaviour:
   mapGenerator: {fileID: 1627748887}
   playerPrefab: {fileID: 7366123833085392799, guid: 7863e66ef3d5d374b8bf3c4db1c260b2, type: 3}
   enemyPrefabs:
-  - {fileID: 0}
+  - {fileID: 6936878267753519378, guid: a7a5bc1650a815e40aca92eb3b69e03b, type: 3}
+  - {fileID: 8849158979689625702, guid: 68fc21669df2006468ee071659802d69, type: 3}
+  - {fileID: 7468399981636804988, guid: ef210dc5f36f59e42961c14a3aa7dc7d, type: 3}
 --- !u!4 &1641832004
 Transform:
   m_ObjectHideFlags: 0
