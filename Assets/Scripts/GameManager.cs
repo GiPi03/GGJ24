@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    public int[] groundTiles;
     public MapGenerator mapGenerator;
     public GameObject playerPrefab;
     public GameObject[] enemyPrefabs;
