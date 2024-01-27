@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class RangeEnemy : Enemy
 {
+    public Transform shootPoint;
+    public Transform axis;
     public GameObject projectile;
     public float projectileSpeed;
     public float projectileTimer;
@@ -13,11 +15,15 @@ public class RangeEnemy : Enemy
     public float range = 5f;
     public override void Attack()
     {
-        GameObject bullet = Instantiate(projectile, transform.position, Quaternion.identity);
+        GameObject bullet = Instantiate(projectile, shootPoint.position, axis.rotation);
         bullet.GetComponent<Rigidbody2D>().velocity = (playerPos.position - transform.position).normalized * projectileSpeed;
     }
     public override void Update()
     {
+
+        Vector2 dir = playerPos.position - transform.position;
+        float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg-180;
+        axis.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
         attackTimer += Time.deltaTime;
         if (attackTimer >= attackSpeed)
         {
@@ -25,6 +31,7 @@ public class RangeEnemy : Enemy
             {
                 aiPath.canMove = false;
                 Attack();
+                attackTimer = 0f;
             }
             else
             {

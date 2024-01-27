@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7122048423323082838}
-  - component: {fileID: 1541368831718950670}
   m_Layer: 0
   m_Name: ShootpointFee
   m_TagString: Untagged
@@ -25,33 +24,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4486797134798924608}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.417, y: 0.05, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.42, y: 0.017, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 5077926670359110474}
+  m_Father: {fileID: 876638801057695307}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1541368831718950670
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4486797134798924608}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 117b08cd6bbce57478b425b3f1ffc664, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bullet: {fileID: 0}
-  shootPoint: {fileID: 7122048423323082838}
-  shots: 0
-  magazine: 10
-  Timer: 0
-  rShots: 0
-  rMagazine: 0
-  holdTime: 1
 --- !u!1 &8849158979689625702
 GameObject:
   m_ObjectHideFlags: 0
@@ -69,9 +48,7 @@ GameObject:
   - component: {fileID: 8960698457011131614}
   - component: {fileID: 2004669006178830261}
   - component: {fileID: 3434170788767428076}
-  - component: {fileID: 2433667629375446962}
-  - component: {fileID: 8973805853367246992}
-  - component: {fileID: 5543680966035008919}
+  - component: {fileID: 7972041005561784348}
   m_Layer: 0
   m_Name: KnochenFee
   m_TagString: Untagged
@@ -92,7 +69,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 7122048423323082838}
+  - {fileID: 876638801057695307}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1784966520200850017
@@ -214,7 +191,7 @@ MonoBehaviour:
   repathRateCompatibility: NaN
   canSearchCompability: 0
   orientation: 1
-  enableRotation: 1
+  enableRotation: 0
   autoRepath:
     mode: 2
     interval: 0.5
@@ -331,7 +308,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 0
   maxHealth: 100
---- !u!114 &2433667629375446962
+--- !u!114 &7972041005561784348
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -340,44 +317,50 @@ MonoBehaviour:
   m_GameObject: {fileID: 8849158979689625702}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 36071cc8b40d2cf4884044ea83fff6ad, type: 3}
+  m_Script: {fileID: 11500000, guid: a94d125981d0d2c4ea9be9384a816e76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  aiPath: {fileID: 0}
-  speed: 5
-  damage: 15
-  aiDestinationSetter: {fileID: 0}
+  aiPath: {fileID: 995084532462973225}
+  speed: 10
+  damage: 10
+  aiDestinationSetter: {fileID: 1336324111644927253}
   attackSpeed: 1
---- !u!114 &8973805853367246992
-MonoBehaviour:
+  shootPoint: {fileID: 0}
+  projectile: {fileID: 2746588104643993128, guid: ae84647003e858f4986b170f30796aad, type: 3}
+  projectileSpeed: 5
+  projectileTimer: 3
+  projectileTimerMax: 0
+  projectileDamage: 15
+  range: 6
+--- !u!1 &8898371860348056290
+GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8849158979689625702}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7b5c99f9fa000b743ba6096f9db79dec, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  weapon: {fileID: 0}
---- !u!114 &5543680966035008919
-MonoBehaviour:
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 876638801057695307}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &876638801057695307
+Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8849158979689625702}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 117b08cd6bbce57478b425b3f1ffc664, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bullet: {fileID: 0}
-  shootPoint: {fileID: 7122048423323082838}
-  shots: 0
-  magazine: 10
-  Timer: 0
-  rShots: 0
-  rMagazine: 0
-  holdTime: 1
+  m_GameObject: {fileID: 8898371860348056290}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 7122048423323082838}
+  m_Father: {fileID: 5077926670359110474}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
