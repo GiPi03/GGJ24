@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 4921315bc0c6ac04f87311cd9e968f1b
+guid: e5e2c5fced1984448b3e339620f72064
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -149,13 +149,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Player Idle Animation_0
+      name: Player Idle Animation Seitlich_0
       rect:
         serializedVersion: 2
-        x: 670
-        y: 9
-        width: 192
-        height: 463
+        x: 1058
+        y: 11
+        width: 149
+        height: 471
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -163,20 +163,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 15e10db1373597541a4dd2ec345ba35a
-      internalID: -741844600
+      spriteID: ab548c3325ae3e348bad4b985cf6115b
+      internalID: -720545539
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player Idle Animation_1
+      name: Player Idle Animation Seitlich_1
       rect:
         serializedVersion: 2
-        x: 878
-        y: 9
-        width: 191
-        height: 467
+        x: 1260
+        y: 11
+        width: 149
+        height: 466
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -184,20 +184,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3c88f30168334f54ea9b4d143ce78d1d
-      internalID: 1725949220
+      spriteID: 93372999725731c429961f7b2fceb7da
+      internalID: 1465155546
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player Idle Animation_2
+      name: Player Idle Animation Seitlich_2
       rect:
         serializedVersion: 2
-        x: 1081
-        y: 364
-        width: 5
-        height: 5
+        x: 1472
+        y: 11
+        width: 150
+        height: 461
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -205,20 +205,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1f622cf1536667145948b3b2703429c3
-      internalID: -171364386
+      spriteID: 6da6438d1595afa4895ead970e69965b
+      internalID: 1733261311
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player Idle Animation_3
+      name: Player Idle Animation Seitlich_3
       rect:
         serializedVersion: 2
-        x: 1083
-        y: 9
-        width: 193
-        height: 473
+        x: 1681
+        y: 11
+        width: 148
+        height: 466
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -226,20 +226,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 35073bf8a313b1c40a87a098a4af252f
-      internalID: 777575103
+      spriteID: eec77250210f6e541a25816830a600e5
+      internalID: 305981970
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player Idle Animation_4
+      name: Player Idle Animation Seitlich_4
       rect:
         serializedVersion: 2
-        x: 1286
-        y: 9
-        width: 193
-        height: 467
+        x: 1893
+        y: 11
+        width: 149
+        height: 471
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -247,8 +247,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 69072c2d5fc406d409aba7fdc68c8ef7
-      internalID: 1155412895
+      spriteID: 0e709bb8af71d494aaa21d191c3994a9
+      internalID: -1830804263
       vertices: []
       indices: 
       edges: []
@@ -264,11 +264,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Player Idle Animation_0: -741844600
-      Player Idle Animation_1: 1725949220
-      Player Idle Animation_2: -171364386
-      Player Idle Animation_3: 777575103
-      Player Idle Animation_4: 1155412895
+      Player Idle Animation Seitlich_0: -720545539
+      Player Idle Animation Seitlich_1: 1465155546
+      Player Idle Animation Seitlich_2: 1733261311
+      Player Idle Animation Seitlich_3: 305981970
+      Player Idle Animation Seitlich_4: -1830804263
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
