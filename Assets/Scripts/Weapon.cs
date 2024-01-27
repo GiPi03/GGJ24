@@ -79,6 +79,7 @@ public class Weapon : MonoBehaviour
     void rShoot()
     {
         GameObject bulletInstance = Instantiate(bullet, shootPoint.position, transform.rotation);
+        bulletInstance.GetComponent<Bullet>().damage = 20;
         bulletInstance.GetComponent<Rigidbody2D>().AddForce(-transform.right * 1000);
         Destroy(bulletInstance, 5);
 
