@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
+    public Sprite[] bullets;
     public int damage;
     void Start()
     {
-
+        GetComponent<SpriteRenderer>().sprite = bullets[Random.Range(0, bullets.Length)];
     }
 
     // Update is called once per frame
