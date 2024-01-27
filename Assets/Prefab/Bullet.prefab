@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 4186992715455529464}
   - component: {fileID: 3835496330827250641}
   - component: {fileID: 1387245879274393751}
-  - component: {fileID: 2037591428305011185}
   - component: {fileID: 855425266292253706}
+  - component: {fileID: -6274604921152774793}
   m_Layer: 0
   m_Name: Bullet
   m_TagString: Untagged
@@ -79,7 +79,7 @@ SpriteRenderer:
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
   m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_FlipX: 0
-  m_FlipY: 0
+  m_FlipY: 1
   m_DrawMode: 0
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
@@ -99,9 +99,9 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 2
   m_LinearDrag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 1
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -114,8 +114,27 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 0
---- !u!58 &2037591428305011185
-CircleCollider2D:
+--- !u!114 &855425266292253706
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 255545890601604253}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 750f2e47fc21c154cbdafd3c6211f8cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bullets:
+  - {fileID: 21300000, guid: 3eb2086a31bac194ab523f28e04e7b8b, type: 3}
+  - {fileID: 21300000, guid: 5816c77b0e0cdcf4985fd199f456c319, type: 3}
+  - {fileID: 21300000, guid: ce3f9766647c01c44b39d4ced9699937, type: 3}
+  - {fileID: 21300000, guid: b387da275d3524340b154ca07265a002, type: 3}
+  - {fileID: 21300000, guid: 33f924e803b220b458ec190a8c1101ea, type: 3}
+  damage: 40
+--- !u!61 &-6274604921152774793
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -147,24 +166,15 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
   serializedVersion: 2
-  m_Radius: 0.5
---- !u!114 &855425266292253706
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 255545890601604253}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 750f2e47fc21c154cbdafd3c6211f8cf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bullets:
-  - {fileID: 21300000, guid: 3eb2086a31bac194ab523f28e04e7b8b, type: 3}
-  - {fileID: 21300000, guid: 5816c77b0e0cdcf4985fd199f456c319, type: 3}
-  - {fileID: 21300000, guid: ce3f9766647c01c44b39d4ced9699937, type: 3}
-  - {fileID: 21300000, guid: b387da275d3524340b154ca07265a002, type: 3}
-  - {fileID: 21300000, guid: 33f924e803b220b458ec190a8c1101ea, type: 3}
-  damage: 40
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0

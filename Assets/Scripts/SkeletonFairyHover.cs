@@ -5,15 +5,11 @@ using UnityEngine;
 public class SkeletonFairyHover : MonoBehaviour
 {
     float timer = 0f;
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
+    public float speed = 2f;
+    public float amplitude = 0.5f;
     void Update()
     {
         timer += Time.deltaTime;
-        transform.position = new Vector3(0, 0.5f * Mathf.Sin(2 *timer), 0);
+        transform.position = new Vector3(0, amplitude * Mathf.Sin(speed*timer), 0);
     }
 }
