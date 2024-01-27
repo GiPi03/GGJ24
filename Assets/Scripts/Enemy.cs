@@ -22,6 +22,7 @@ public class Enemy : MonoBehaviour
     {
         playerPos = GameObject.FindGameObjectWithTag("Player").transform;
         aiPath.maxSpeed = speed;
+        aiDestinationSetter.target = playerPos;
     }
     // Update is called once per frame
     

@@ -17,6 +17,7 @@ public class MeleeEnemy : Enemy
             if (Vector2.Distance(transform.position, playerPos.position) < 1f)
             {
                 Attack();
+                attackTimer = 0;
             }
         }
     }
