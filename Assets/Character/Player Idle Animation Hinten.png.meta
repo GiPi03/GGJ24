@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 4921315bc0c6ac04f87311cd9e968f1b
+guid: 159dd3051e43a884a9baa19ab1a8f795
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -149,13 +149,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Player Idle Animation_0
+      name: Player Idle Animation Hinten_0
       rect:
         serializedVersion: 2
-        x: 670
+        x: 942
         y: 9
-        width: 192
-        height: 463
+        width: 193
+        height: 462
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -163,19 +163,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 15e10db1373597541a4dd2ec345ba35a
-      internalID: -741844600
+      spriteID: c6e093dfa1c676546828fdeae6d2d176
+      internalID: -1409293082
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player Idle Animation_1
+      name: Player Idle Animation Hinten_1
       rect:
         serializedVersion: 2
-        x: 878
+        x: 1152
         y: 9
-        width: 191
+        width: 193
         height: 467
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -184,40 +184,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3c88f30168334f54ea9b4d143ce78d1d
-      internalID: 1725949220
+      spriteID: 67788b492b1331b41b9aab17444a8cd0
+      internalID: 2133168461
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player Idle Animation_2
+      name: Player Idle Animation Hinten_2
       rect:
         serializedVersion: 2
-        x: 1081
-        y: 364
-        width: 5
-        height: 5
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1f622cf1536667145948b3b2703429c3
-      internalID: -171364386
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Player Idle Animation_3
-      rect:
-        serializedVersion: 2
-        x: 1083
+        x: 1362
         y: 9
-        width: 193
+        width: 191
         height: 473
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -226,29 +205,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 35073bf8a313b1c40a87a098a4af252f
-      internalID: 777575103
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Player Idle Animation_4
-      rect:
-        serializedVersion: 2
-        x: 1286
-        y: 9
-        width: 193
-        height: 467
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 69072c2d5fc406d409aba7fdc68c8ef7
-      internalID: 1155412895
+      spriteID: 2197c31c8dcbcf8469168a35a5ab5cbf
+      internalID: -680625866
       vertices: []
       indices: 
       edges: []
@@ -264,11 +222,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Player Idle Animation_0: -741844600
-      Player Idle Animation_1: 1725949220
-      Player Idle Animation_2: -171364386
-      Player Idle Animation_3: 777575103
-      Player Idle Animation_4: 1155412895
+      Player Idle Animation Hinten_0: -1409293082
+      Player Idle Animation Hinten_1: 2133168461
+      Player Idle Animation Hinten_2: -680625866
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

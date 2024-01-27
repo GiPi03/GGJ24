@@ -15,51 +15,53 @@ public class MapGenerator : MonoBehaviour
     public string seed;
     private void Update()
     {
-        if (Input.GetKey(KeyCode.Space))
-        {
+        //if (Input.GetKey(KeyCode.Space))
+        //{
             
-            seed = "Atzensport"+Random.Range(0, 100000);
-            int[,] a = GenerateMap();
-            a = FillMapRandom(a);
-            for (int i = 0; i < 3; i++)
-            {
-                a = SmoothMap(a);
-            }
-            ProcessMap(a);
-            a = SetRandomFloorTiles(a);
-            RenderMap(a);
-        }
-        if (Input.GetKeyDown(KeyCode.R))
-        {
+        //    seed = "Atzensport"+Random.Range(0, 100000);
+        //    int[,] a = GenerateMap();
+        //    a = FillMapRandom(a);
+        //    for (int i = 0; i < 3; i++)
+        //    {
+        //        a = SmoothMap(a);
+        //    }
+        //    ProcessMap(a);
+        //    a = SetRandomFloorTiles(a);
+        //    RenderMap(a);
+        //}
+        //if (Input.GetKeyDown(KeyCode.R))
+        //{
 
-            seed = "Atzensport" + Random.Range(0, 100000);
-            int[,] a = GenerateMap();
-            a = FillMapRandom(a);
-            for (int i = 0; i < 3; i++)
-            {
-                a = SmoothMap(a);
-            }
-            ProcessMap(a);
-           a =  SetRandomFloorTiles(a);
-            RenderMap(a);
-        }
+        //    seed = "Atzensport" + Random.Range(0, 100000);
+        //    int[,] a = GenerateMap();
+        //    a = FillMapRandom(a);
+        //    for (int i = 0; i < 3; i++)
+        //    {
+        //        a = SmoothMap(a);
+        //    }
+        //    ProcessMap(a);
+        //   a =  SetRandomFloorTiles(a);
+        //    RenderMap(a);
+        //}
     }
     private void Start()
     {
-        int[,] a = GenerateMap();
-        a = FillMapRandom(a);
-        for (int i = 0; i < 3; i++)
-        {
-            a = SmoothMap(a);
-        }
-        ProcessMap(a);
-        a = SetRandomFloorTiles(a);
-        RenderMap(a);
+       
+        
     }
     public int[,] GenerateMap()
     {
         int[,] mapValues = new int[mapSize.x, mapSize.y];
+        mapValues = FillMapRandom(mapValues);
+        for (int i = 0; i < 3; i++)
+        {
+            mapValues = SmoothMap(mapValues);
+        }
+        ProcessMap(mapValues);
+        mapValues = SetRandomFloorTiles(mapValues);
+        RenderMap(mapValues);
         return mapValues;
+
     }
     public int[,] FillMapRandom(int[,] map)
     {
