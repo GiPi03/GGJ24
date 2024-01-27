@@ -8,15 +8,20 @@ public class CamFollow : MonoBehaviour
     Transform player;
     void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Player").transform;
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-         if(player != null)
+        player = GameObject.FindGameObjectWithTag("Player").transform;
+        if (player != null)
         {
             transform.position = new Vector3(player.position.x, player.position.y, -10);
-        }  
+        }
+        else
+        {
+            player = GameObject.FindGameObjectWithTag("Player").transform;
+        }
     }
 }

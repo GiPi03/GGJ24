@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class DialogPanel : MonoBehaviour
 {
-    Dialog dialog = new Dialog();
+    
     public Text title;
     public Text description;
     public void ShowDialog(Dialog dialog)

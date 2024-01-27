@@ -5,10 +5,6 @@ using UnityEngine;
 public class WeaponMovement : MonoBehaviour
 {
     public Transform weapon;
-    void Start()
-    {
-        
-    }
 
     // Update is called once per frame
     void Update()

@@ -30,7 +30,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.7362139, y: -0.9716418, z: 0}
-  m_LocalScale: {x: 3.0104063, y: 3.0104063, z: 3.0104063}
+  m_LocalScale: {x: 0.24312343, y: 0.24312343, z: 0.24312343}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -75,7 +75,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 10
+  m_SortingOrder: 20
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
   m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_FlipX: 0
@@ -162,9 +162,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bullets:
-  - {fileID: 21300000, guid: 8547416d89a29e74791de8e04a7956f2, type: 3}
-  - {fileID: 21300000, guid: 480f0686ee153144e85f7fd3fd17c90c, type: 3}
-  - {fileID: 21300000, guid: 046f6aa046cd7bf46b3c62b4135eada8, type: 3}
-  - {fileID: 21300000, guid: a967c524067dbae4a9db9ba254d65167, type: 3}
-  - {fileID: 21300000, guid: 108c4de125b695647bd0f06ed98718cf, type: 3}
+  - {fileID: 21300000, guid: 3eb2086a31bac194ab523f28e04e7b8b, type: 3}
+  - {fileID: 21300000, guid: 5816c77b0e0cdcf4985fd199f456c319, type: 3}
+  - {fileID: 21300000, guid: ce3f9766647c01c44b39d4ced9699937, type: 3}
+  - {fileID: 21300000, guid: b387da275d3524340b154ca07265a002, type: 3}
+  - {fileID: 21300000, guid: 33f924e803b220b458ec190a8c1101ea, type: 3}
   damage: 40

@@ -7,19 +7,20 @@ public class DialogCharacter : MonoBehaviour
     public List<int> dialogIDs;
     DialogSystem dialogSystem;
     Transform playerPos;
-    public DialogPanel currentPanel = null;
+    DialogPanel currentPanel = null;
 
 
     // Start is called before the first frame update
     void Start()
     {
-        playerPos = GameObject.FindGameObjectWithTag("Player").transform;
-        dialogSystem = FindObjectOfType<DialogSystem>();
+        
     }
 
     // Update is called once per frame
     void Update()
     {
+        playerPos = GameObject.FindGameObjectWithTag("Player").transform;
+        dialogSystem = FindObjectOfType<DialogSystem>();
         if (Vector3.Distance(transform.position, playerPos.position) < 2f)
         {
             if (Input.GetKeyDown(KeyCode.E))
@@ -37,5 +38,6 @@ public class DialogCharacter : MonoBehaviour
 
             }
         }
+        
     }
 }
