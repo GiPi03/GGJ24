@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 724158205953123604}
   m_Layer: 0
   m_Name: RatDude
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -99,7 +99,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogIDs: 000000000100000002000000030000000400000005000000
-  currentPanel: {fileID: 0}
 --- !u!95 &724158205953123604
 Animator:
   serializedVersion: 5

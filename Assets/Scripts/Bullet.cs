@@ -7,10 +7,13 @@ public class Bullet : MonoBehaviour
    
 
     // Update is called once per frame
-    void Update()
+    void Start()
     {
-
+        Destroy(gameObject, 2f);
     }
+    
+
+    
     protected virtual void OnCollisionEnter2D(Collision2D collision)
     {
         

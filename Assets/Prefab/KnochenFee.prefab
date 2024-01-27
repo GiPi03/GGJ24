@@ -41,7 +41,6 @@ GameObject:
   m_Component:
   - component: {fileID: 5077926670359110474}
   - component: {fileID: 1784966520200850017}
-  - component: {fileID: 5309466627022704456}
   - component: {fileID: 2036753363442424883}
   - component: {fileID: 995084532462973225}
   - component: {fileID: 1336324111644927253}
@@ -49,9 +48,10 @@ GameObject:
   - component: {fileID: 2004669006178830261}
   - component: {fileID: 3434170788767428076}
   - component: {fileID: 7972041005561784348}
+  - component: {fileID: 6777014149630742111}
   m_Layer: 0
   m_Name: KnochenFee
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -124,20 +124,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &5309466627022704456
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8849158979689625702}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 91147027da80413458c6f0466aa57a1f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 2
-  amplitude: 0.5
 --- !u!114 &2036753363442424883
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -293,7 +279,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!114 &3434170788767428076
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -321,17 +307,32 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   aiPath: {fileID: 995084532462973225}
-  speed: 10
+  speed: 4
   damage: 10
   aiDestinationSetter: {fileID: 1336324111644927253}
   attackSpeed: 1
-  shootPoint: {fileID: 0}
+  shootPoint: {fileID: 7122048423323082838}
+  axis: {fileID: 876638801057695307}
   projectile: {fileID: 2746588104643993128, guid: ae84647003e858f4986b170f30796aad, type: 3}
-  projectileSpeed: 5
+  projectileSpeed: 7
   projectileTimer: 3
   projectileTimerMax: 0
   projectileDamage: 15
   range: 6
+--- !u!114 &6777014149630742111
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8849158979689625702}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c86d2db64e82cad4a867c994ac138fc7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 0
+  maxHealth: 100
 --- !u!1 &8898371860348056290
 GameObject:
   m_ObjectHideFlags: 0

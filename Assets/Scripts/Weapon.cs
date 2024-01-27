@@ -1,9 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Android;
 
 public class Weapon : MonoBehaviour
 {
+    public ParticleSystem ps;
+
+    public int damage = 10;
     public GameObject bullet;
     public Transform shootPoint;
     public float shots = 0;
@@ -17,8 +21,15 @@ public class Weapon : MonoBehaviour
     bool drei;
     bool rclick;
 
+    private float originalEmissionRate;
 
 
+
+    private void Start()
+    {
+        
+        
+    }
 
 
     // Update is called once per frame
@@ -36,7 +47,10 @@ public class Weapon : MonoBehaviour
         }
         if (Input.GetKey(KeyCode.Mouse1))
         {
+          
+
             Timer += Time.deltaTime;
+            ps.Emit(2);
             if (Timer >= holdTime) 
             {
                 drei = true;
@@ -44,11 +58,16 @@ public class Weapon : MonoBehaviour
             }
 
         }
+       
+
 
         if (Input.GetKeyUp(KeyCode.Mouse1) && drei) //Rechtsklick 3fach Schuss
         {
+            
+            
             StartCoroutine(RClick(3));
             drei = false;
+            
         }
 
         if (Input.GetKeyDown(KeyCode.R))
@@ -66,10 +85,15 @@ public class Weapon : MonoBehaviour
             StartCoroutine(Reload());
         }
     }
-
+    IEnumerator Hold()
+    {
+        yield return new WaitForSeconds(0.5f);
+        rclick = false;
+    }
     void Shoot()
     {
         GameObject bulletInstance = Instantiate(bullet, shootPoint.position, transform.rotation);
+        bulletInstance.GetComponent<Bullet>().damage = damage;
         bulletInstance.GetComponent<Rigidbody2D>().AddForce(-transform.right * 1000);
         Destroy(bulletInstance, 5);
         shots++;

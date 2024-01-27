@@ -7,7 +7,7 @@ public class GameManager : MonoBehaviour
     public GameObject playerPrefab;
     public GameObject[] enemyPrefabs;
 
-    int spawnEnemy = 3;
+    public int spawnEnemy = 3;
     int[,] mapValue;
     void Start()
     {
