@@ -11,6 +11,13 @@ public class Movement : MonoBehaviour
     public float speed = 10f;
     float currentInputX = 0;
     float currentInputY = 0;
+    FMOD.Studio.EventInstance playerWalking;
+    public bool isMoving = false;
+
+    void Start()
+    {
+        playerWalking = FMODUnity.RuntimeManager.CreateInstance("event:/SFX/Player_walking");
+    }
     void Update()
     {
         //Get Input.
@@ -18,23 +25,37 @@ public class Movement : MonoBehaviour
         SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
         float horizontal = Input.GetAxis("Horizontal");
         float vertical = Input.GetAxis("Vertical");
-        if(horizontal != 0)
+        if (vertical != 0 || horizontal != 0)
         {
-            if(horizontal != currentInputX)
+            if (isMoving == false)
+            {
+                isMoving = true;
+                playerWalking.start();
+            }
+        }
+        else
+        {
+            playerWalking.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+            isMoving = false;
+        }
+
+        if (horizontal != 0)
+        {
+            if (horizontal != currentInputX)
             {
                 currentInputX = horizontal;
             }
-            
+
         }
-        if(vertical != 0)
+        if (vertical != 0)
         {
-            if(vertical != currentInputY)
+            if (vertical != currentInputY)
             {
                 currentInputY = vertical;
             }
         }
 
-        if(currentInputX > 0)
+        if (currentInputX > 0)
         {
             spriteRenderer.flipX = false;
         }
@@ -50,5 +71,5 @@ public class Movement : MonoBehaviour
         animator.SetFloat("moveY", vertical);
 
     }
-   
+
 }
