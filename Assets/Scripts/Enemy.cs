@@ -9,12 +9,13 @@ public class Enemy : MonoBehaviour
     
     public AIPath aiPath;
     public float speed = 10f;
+    public int damage = 10;
     public AIDestinationSetter aiDestinationSetter;
-   
-    //public float attackSpeed = 1f;
-    //private float attackTimer = 0f;
-    //bool canAttack = true;
-    Transform playerPos;
+
+    public float attackSpeed = 1f;
+    protected float attackTimer = 0f;
+    protected bool canAttack = true;
+    protected Transform playerPos;
     // Start is called before the first frame update
 
     private void Start()
@@ -29,19 +30,10 @@ public class Enemy : MonoBehaviour
 
 
     }
-    //  attackTimer += Time.deltaTime;
-       // if (attackTimer >= attackSpeed)
-//        {
-//            if (Vector2.Distance(transform.position, playerPos.position) < 1f)
-//            {
-//                Attack();
-//}}
-        
-
+ 
     public virtual void Attack()
     {
-        //playerPos.GetComponent<GiSchwanz>().SubHealth(10);
-        //attackTimer = 0;
+     
     }
 }
 
