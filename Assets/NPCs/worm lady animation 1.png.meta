@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 423e71df8405c064ca2cfc542437446a
+guid: 2344deb7196f37a41b021e42f4c14e1f
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -149,13 +149,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: wormlady animation_0
+      name: worm lady animation_0
       rect:
         serializedVersion: 2
-        x: 33
-        y: 79
-        width: 453
-        height: 93
+        x: 201
+        y: 56
+        width: 451
+        height: 354
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -163,20 +163,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: df633972786a31441b7e8f7a17567986
-      internalID: 602453882
+      spriteID: 4e671537f5988234198145ae46de6a95
+      internalID: 1718385826
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wormlady animation_1
+      name: worm lady animation_1
       rect:
         serializedVersion: 2
-        x: 499
-        y: 81
+        x: 845
+        y: 51
         width: 452
-        height: 92
+        height: 351
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -184,20 +184,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dd37788892322d8409d7fb5434b1ee91
-      internalID: 571370115
+      spriteID: 01fd89152f7578c469e16b0cd30bec25
+      internalID: 1445804545
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wormlady animation_2
+      name: worm lady animation_2
       rect:
         serializedVersion: 2
-        x: 960
-        y: 83
-        width: 453
-        height: 144
+        x: 1442
+        y: 51
+        width: 452
+        height: 349
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -205,60 +205,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d76df3deb704f5a4d817a3e203d8b2f3
-      internalID: 1933755387
+      spriteID: 79d21ae07be42a04c9a5b8d9e45a39f1
+      internalID: 552720638
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wormlady animation_3
+      name: worm lady animation_3
       rect:
         serializedVersion: 2
-        x: 1423
-        y: 75
-        width: 453
-        height: 211
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 700cd084fecc3b64696965b28d826c81
-      internalID: -253059758
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: wormlady animation_4
-      rect:
-        serializedVersion: 2
-        x: 1887
-        y: 73
-        width: 453
-        height: 283
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 53ea0e6fbcc07904497e6331c3480990
-      internalID: -1261850926
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: wormlady animation_5
-      rect:
-        serializedVersion: 2
-        x: 2383
-        y: 79
+        x: 1951
+        y: 54
         width: 452
         height: 353
       alignment: 0
@@ -268,8 +226,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9a40c104a7f5991428a99c14c1baa0c1
-      internalID: 1803997105
+      spriteID: 78fde0039697f514b96c05184bd67e04
+      internalID: 2144122857
       vertices: []
       indices: 
       edges: []
@@ -285,12 +243,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      wormlady animation_0: 602453882
-      wormlady animation_1: 571370115
-      wormlady animation_2: 1933755387
-      wormlady animation_3: -253059758
-      wormlady animation_4: -1261850926
-      wormlady animation_5: 1803997105
+      worm lady animation_0: 1718385826
+      worm lady animation_1: 1445804545
+      worm lady animation_2: 552720638
+      worm lady animation_3: 2144122857
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
