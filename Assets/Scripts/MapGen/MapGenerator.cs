@@ -127,7 +127,7 @@ public class MapGenerator : MonoBehaviour
                 if (x >= 0 && x < mapSize.x && y >= 0 && y < mapSize.y)
                 {
                     Vector3Int vector3Intrq = new Vector3Int(x, y);
-                    wallTilemap.SetTile(vector3Intrq,null);
+                    
                     switch (map[x, y])
                     {
                         case 0:

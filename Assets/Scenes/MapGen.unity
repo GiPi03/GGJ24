@@ -860,10 +860,11 @@ MonoBehaviour:
   - {fileID: 6936878267753519378, guid: a7a5bc1650a815e40aca92eb3b69e03b, type: 3}
   - {fileID: 8849158979689625702, guid: 68fc21669df2006468ee071659802d69, type: 3}
   - {fileID: 7468399981636804988, guid: ef210dc5f36f59e42961c14a3aa7dc7d, type: 3}
+  player: {fileID: 0}
   portalPrefab: {fileID: 2876527692896363545, guid: 2a3bd9b799f73844eb015f99d16d7823, type: 3}
   minEnemy: 1
-  maxEnemy: 20
-  spawnEnemy: 3
+  maxEnemy: 1
+  spawnEnemy: 1
 --- !u!4 &1641832004
 Transform:
   m_ObjectHideFlags: 0

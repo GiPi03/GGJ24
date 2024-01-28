@@ -11,7 +11,7 @@ public class Portal : MonoBehaviour
         {
             GameObject.Find("GameManager").GetComponent<GameManager>().NextMap();
 
-            Destroy(collision.gameObject);
+       
             Destroy(gameObject);
             
         }
