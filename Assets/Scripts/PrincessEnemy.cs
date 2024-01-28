@@ -13,5 +13,10 @@ public class PrincessEnemy : RangeEnemy
             animator.SetTrigger("IsPrinzess");
         }
     }
+    public override void Attack()
+    {
+        base.Attack();
+        animator.SetTrigger("IsAttack");
+    }
 
 }

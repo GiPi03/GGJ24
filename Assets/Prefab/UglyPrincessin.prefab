@@ -48,9 +48,11 @@ GameObject:
   - component: {fileID: 8622398030413878677}
   - component: {fileID: 8183670792247680582}
   - component: {fileID: 5415248134741986634}
+  - component: {fileID: 564801805096905913}
+  - component: {fileID: 4889734749486603486}
   m_Layer: 0
   m_Name: UglyPrincessin
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -139,7 +141,7 @@ MonoBehaviour:
   speed: 4
   damage: 30
   aiDestinationSetter: {fileID: 8622398030413878677}
-  attackSpeed: 0.5
+  attackSpeed: 0.05
   shootPoint: {fileID: 4642407706500844017}
   axis: {fileID: 6835989092219379183}
   projectile: {fileID: 2746588104643993128, guid: c8230f890f0c68648aa793109b49cb86, type: 3}
@@ -148,6 +150,7 @@ MonoBehaviour:
   projectileTimerMax: 0
   projectileDamage: 30
   range: 6
+  animator: {fileID: 0}
 --- !u!114 &3472527519355979732
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -294,6 +297,41 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &564801805096905913
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5194525599901728091}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c86d2db64e82cad4a867c994ac138fc7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 0
+  maxHealth: 600
+--- !u!95 &4889734749486603486
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5194525599901728091}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: cb7c32f2418f58e40aa29ba7233aa474, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &7272336767416608729
 GameObject:
   m_ObjectHideFlags: 0
@@ -319,7 +357,7 @@ Transform:
   m_GameObject: {fileID: 7272336767416608729}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.733, y: 0, z: 0}
+  m_LocalPosition: {x: -0.972, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
