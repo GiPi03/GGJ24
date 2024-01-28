@@ -19,6 +19,9 @@ public class GameManager : MonoBehaviour
     bool allEnemyDead = false;
     void Start()
     {
+        DontDestroyOnLoad(mapGenerator);
+        DontDestroyOnLoad(gameObject);
+        DontDestroyOnLoad(mapGenerator.wallTilemap);
         mapValue = mapGenerator.GenerateMap(0);
         player = SpawnPlayer();
         AstarPath.active.Scan();
@@ -42,8 +45,9 @@ public class GameManager : MonoBehaviour
 
     public void NextMap()
     {
-        mapGenerator.tilemap.ClearAllTiles();
         mapGenerator.wallTilemap.ClearAllTiles();
+        mapGenerator.tilemap.ClearAllTiles();
+        
         mapValue = mapGenerator.GenerateMap(i);
         StartCoroutine(UpdateCollider());
         AstarPath.active.Scan();
@@ -74,8 +78,15 @@ public class GameManager : MonoBehaviour
     }
     IEnumerator UpdateCollider()
     {
-        mapGenerator.wallTilemap.GetComponent<TilemapCollider2D>().enabled = false;
-        yield return new WaitForSeconds(0.05f);// Wait one frame
-        mapGenerator.wallTilemap.GetComponent<TilemapCollider2D>().enabled = true;
+        if (mapGenerator.wallTilemap != null)
+        {
+            mapGenerator.wallTilemap.GetComponent<TilemapCollider2D>().enabled = false;
+            yield return null; // Wait one frame
+                               // Ensure the wallTilemap wasn't destroyed during the frame delay
+            if (mapGenerator.wallTilemap != null)
+            {
+                mapGenerator.wallTilemap.GetComponent<TilemapCollider2D>().enabled = true;
+            }
+        }
     }
 }
