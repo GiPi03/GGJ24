@@ -75,14 +75,12 @@ public class GameManager : MonoBehaviour
         
         mapValue = mapGenerator.GenerateMap(i);
         StartCoroutine(UpdateCollider());
-        
+        AstarPath.active.Scan();
         
         Destroy(player);
         player = SpawnPlayer();
         spawnEnemy = Random.Range(minEnemy, maxEnemy);
-        
         SpawnEnemies();
-
         allEnemyDead = false;
         i++;
     }
@@ -113,7 +111,6 @@ public class GameManager : MonoBehaviour
             if (mapGenerator.wallTilemap != null)
             {
                 mapGenerator.wallTilemap.GetComponent<TilemapCollider2D>().enabled = true;
-                AstarPath.active.Scan();
             }
         }
     }
