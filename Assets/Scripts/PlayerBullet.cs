@@ -16,5 +16,6 @@ public class PlayerBullet : Bullet
             collision.gameObject.GetComponent<EnemyHealth>().SubHealth(damage);
             Destroy(gameObject);
         }
-    }
+        Destroy(gameObject);
+    } 
 }
