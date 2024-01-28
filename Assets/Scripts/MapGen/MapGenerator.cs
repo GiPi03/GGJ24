@@ -13,6 +13,7 @@ public class MapGenerator : MonoBehaviour
     public Tile wallTile;
     public float wallFillPercent;
     public string seed;
+    public List<Vector2Int> region = new List<Vector2Int>();
     private void Update()
     {
         //if (Input.GetKey(KeyCode.Space))
@@ -58,6 +59,7 @@ public class MapGenerator : MonoBehaviour
             mapValues = SmoothMap(mapValues);
         }
         ProcessMap(mapValues);
+        region = GetRegions(mapValues, mapSize, 1)[0];
         mapValues = SetRandomFloorTiles(mapValues);
         RenderMap(mapValues);
         return mapValues;
