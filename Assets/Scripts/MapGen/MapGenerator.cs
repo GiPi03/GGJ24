@@ -50,10 +50,10 @@ public class MapGenerator : MonoBehaviour
        
         
     }
-    public int[,] GenerateMap()
+    public int[,] GenerateMap(int seedInt)
     {
         int[,] mapValues = new int[mapSize.x, mapSize.y];
-        mapValues = FillMapRandom(mapValues);
+        mapValues = FillMapRandom(mapValues,seedInt);
         for (int i = 0; i < 3; i++)
         {
             mapValues = SmoothMap(mapValues);
@@ -65,9 +65,9 @@ public class MapGenerator : MonoBehaviour
         return mapValues;
 
     }
-    public int[,] FillMapRandom(int[,] map)
+    public int[,] FillMapRandom(int[,] map, int seedInt)
     {
-        System.Random random = new System.Random(seed.GetHashCode());
+        System.Random random = new System.Random(seedInt+seed.GetHashCode());
         for (int x = 0; x < mapSize.x; x++)
         {
             for (int y = 0; y < mapSize.y; y++)
