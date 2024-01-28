@@ -50,6 +50,7 @@ GameObject:
   - component: {fileID: 5415248134741986634}
   - component: {fileID: 564801805096905913}
   - component: {fileID: 4889734749486603486}
+  - component: {fileID: 6544049957763894675}
   m_Layer: 0
   m_Name: UglyPrincessin
   m_TagString: Enemy
@@ -332,6 +333,37 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &6544049957763894675
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5194525599901728091}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -1063595159
+      Data2: 1176698825
+      Data3: 1397762729
+      Data4: 692170855
+    Path: event:/SFX/Princess
+  Event: 
+  PlayEvent: 1
+  StopEvent: 2
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &7272336767416608729
 GameObject:
   m_ObjectHideFlags: 0
