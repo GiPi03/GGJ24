@@ -171,7 +171,7 @@ public class MapGenerator : MonoBehaviour
         {
             for (int y = 0; y < mapSize.y; y++)
             {
-                int neighbourCount = GetNeighbourCount(map, new Vector2Int(x, y));
+                int neighbourCount = GetNeighbourCount(map, new Vector2Int(x, y), 1);
                 if (IsBorder(x, y, mapSize))
                 {
                     continue;
@@ -190,7 +190,7 @@ public class MapGenerator : MonoBehaviour
 
         return map;
     }
-    public int GetNeighbourCount(int[,] map, Vector2Int pos)
+    public int GetNeighbourCount(int[,] map, Vector2Int pos, int tileType)
     {
         int count = 0;
         for (int neighbourX = pos.x - 1; neighbourX <= pos.x + 1; neighbourX++)
@@ -203,7 +203,8 @@ public class MapGenerator : MonoBehaviour
                     //If the neighbour is not the center and a wall tile do count++;
                     if (neighbourX != pos.x || neighbourY != pos.y)
                     {
-                        count += map[neighbourX, neighbourY];
+                        if (map[neighbourX, neighbourY] == tileType)
+                            count++;
                     }
                 }
                 else

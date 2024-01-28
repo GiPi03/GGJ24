@@ -6,13 +6,16 @@ public class GameManager : MonoBehaviour
     public MapGenerator mapGenerator;
     public GameObject playerPrefab;
     public GameObject[] enemyPrefabs;
+    public GameObject[] vasePrefabs;
 
     public int spawnEnemy = 3;
+    public int spawnVase = 6;
     int[,] mapValue;
     void Start()
     {
         mapValue = mapGenerator.GenerateMap();
         SpawnPlayer();
+        SpawnVase();
         SpawnEnemies();
     }
     void SpawnPlayer()
@@ -31,7 +34,26 @@ public class GameManager : MonoBehaviour
         }
         Instantiate(playerPrefab, new Vector3(spawnPos.x, spawnPos.y, 0), Quaternion.identity);
     }
-    
+ 
+    void SpawnVase()
+    {
+        Vector2Int spawnPos = new Vector2Int();
+        for (int i = 0; i < spawnVase; i++)
+        {
+            for (int x = 0; x < mapValue.GetLength(0); x++)
+            {
+                for (int y = 0; y < mapValue.GetLength(1); y++)
+                {
+                    if (mapValue[x, y] == 2)
+                    {
+                        spawnPos = new Vector2Int(x, y);
+                        break;
+                    }
+                }
+            }
+            Instantiate(vasePrefabs[Random.Range(0, vasePrefabs.Length)], new Vector3(spawnPos.x, spawnPos.y, 0), Quaternion.identity);
+        }
+    }
     void SpawnEnemies()
     {
         Vector2Int spawnPos = new Vector2Int();
