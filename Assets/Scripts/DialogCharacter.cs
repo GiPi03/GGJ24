@@ -30,7 +30,7 @@ public class DialogCharacter : MonoBehaviour
                     currentPanel.ClosePanel();
                     return;
                 }
-                currentPanel = dialogSystem.OpenDialog(dialogSystem.GetDialog(dialogIDs[0]));
+                currentPanel = dialogSystem.OpenDialog(dialogSystem.GetDialog(dialogIDs[0]),transform);
                 if (dialogIDs.Count > 1)
                 {
                     dialogIDs.RemoveAt(0);

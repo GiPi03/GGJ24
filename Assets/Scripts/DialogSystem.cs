@@ -8,7 +8,7 @@ public class DialogSystem : MonoBehaviour
     private void Start()
     {
     }
-    public DialogPanel OpenDialog(Dialog dialog)
+    public DialogPanel OpenDialog(Dialog dialog, Transform chare)
     {
         GameObject panel = Instantiate(dialogPrefab, GameObject.FindGameObjectWithTag("DialogCanvas").transform);
         panel.GetComponent<DialogPanel>().ShowDialog(dialog);
@@ -17,7 +17,8 @@ public class DialogSystem : MonoBehaviour
     Dialog[] GetDialogs()
     {
         List<Dialog> list = new List<Dialog>();
-        using (System.IO.StreamReader sr = new System.IO.StreamReader(Application.dataPath + "/dialog.csv"))
+        string filePath = System.IO.Path.Combine(Application.streamingAssetsPath, "dialog.csv");
+        using (System.IO.StreamReader sr = new System.IO.StreamReader(filePath))
         {
             string line;
             while ((line = sr.ReadLine()) != null)
@@ -30,12 +31,16 @@ public class DialogSystem : MonoBehaviour
                 }
             }
         }
+    
+
         return list.ToArray();
-    }
+        }
+    
     public Dialog GetDialog(int id)
     {
+        string filePath = System.IO.Path.Combine(Application.streamingAssetsPath, "dialog.csv");
         Dialog dialog = new Dialog();
-        using (System.IO.StreamReader sr = new System.IO.StreamReader(Application.dataPath + "/dialog.csv"))
+        using (System.IO.StreamReader sr = new System.IO.StreamReader(filePath))
         {
             string line;
             while ((line = sr.ReadLine()) != null)
