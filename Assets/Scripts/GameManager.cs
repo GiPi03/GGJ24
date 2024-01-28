@@ -1,5 +1,7 @@
 using Pathfinding;
 using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
@@ -19,7 +21,7 @@ public class GameManager : MonoBehaviour
     public int spawnVase = 6;
 
     public GameObject[] dialogCharacter;
-    
+
     int[,] mapValue;
     int i = 1;
     bool allEnemyDead = false;
@@ -27,8 +29,8 @@ public class GameManager : MonoBehaviour
     int npcMax = 3;
     void Start()
     {
-        
-      
+
+
         DontDestroyOnLoad(mapGenerator);
         DontDestroyOnLoad(gameObject);
         DontDestroyOnLoad(mapGenerator.wallTilemap);
@@ -50,7 +52,10 @@ public class GameManager : MonoBehaviour
     void SpawnNPC()
     {
 
-        GameObject npc = Instantiate(dialogCharacter[0],(Vector3)(Vector2)mapGenerator.region[Random.Range(0,mapGenerator.region.Count)], Quaternion.identity);
+        GameObject npc = Instantiate(dialogCharacter[0], (Vector3)(Vector2)mapGenerator.region[Random.Range(0, mapGenerator.region.Count)], Quaternion.identity);
+        List<GameObject> dialogCharactere = dialogCharacter.ToList();
+        dialogCharactere.RemoveAt(0);
+        dialogCharacter = dialogCharactere.ToArray();
     }
     void SpawnVase()
     {
@@ -80,28 +85,36 @@ public class GameManager : MonoBehaviour
 
     public void NextMap()
     {
+
         mapGenerator.wallTilemap.ClearAllTiles();
         mapGenerator.tilemap.ClearAllTiles();
-        
+
         mapValue = mapGenerator.GenerateMap(i);
         StartCoroutine(UpdateCollider());
         AstarPath.active.Scan();
-        
+
         Destroy(player);
         player = SpawnPlayer();
-        spawnEnemy = Random.Range(minEnemy, maxEnemy);
-        SpawnEnemies();
-        if(npcCounter >= npcMax)
+        if (dialogCharacter.Length != 0)
         {
-            SpawnNPC();
-            npcCounter = 0;
+            spawnEnemy = Random.Range(minEnemy, maxEnemy);
+            SpawnEnemies();
+            if (npcCounter >= npcMax)
+            {
+                SpawnNPC();
+                npcCounter = 0;
+            }
+            else
+            {
+                npcCounter++;
+            }
+
+            allEnemyDead = false;
         }
         else
         {
-            npcCounter++;
+            
         }
-
-        allEnemyDead = false;
         i++;
     }
     GameObject SpawnPlayer()
@@ -133,5 +146,9 @@ public class GameManager : MonoBehaviour
                 mapGenerator.wallTilemap.GetComponent<TilemapCollider2D>().enabled = true;
             }
         }
+    }
+    void SpawnBoss()
+    {
+
     }
 }

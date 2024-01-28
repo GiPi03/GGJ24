@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5127263194505000465}
   - component: {fileID: 724158205953123604}
   m_Layer: 0
-  m_Name: RatDude
+  m_Name: RatDude0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -98,7 +98,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3672edc5e593ca94aaf14b90427ec1bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogIDs: 000000000100000002000000030000000400000005000000
+  dialogIDs: 00000000
 --- !u!95 &724158205953123604
 Animator:
   serializedVersion: 5
