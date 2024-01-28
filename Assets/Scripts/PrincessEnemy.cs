@@ -10,8 +10,10 @@ public class PrincessEnemy : RangeEnemy
         base.Update();
         if (GetComponent<EnemyHealth>().health < 20f)
         {
-            animator.SetTrigger("IsPrinzess");
+            animator.SetBool("isHealed",true);
         }
+        GetComponent<EnemyHealth>().enabled = false;
+        GetComponent<Enemy>().enabled = false;
     }
     public override void Attack()
     {
