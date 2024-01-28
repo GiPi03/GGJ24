@@ -11,6 +11,7 @@ public class MeleeEnemy : Enemy
     }
     public override void Update()
     {
+        base.Update();
         attackTimer += Time.deltaTime;
         if(attackTimer >= attackSpeed)
         {
