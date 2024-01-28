@@ -32,7 +32,6 @@ public class DialogSystem : MonoBehaviour
             }
         }
     
-
         return list.ToArray();
         }
     

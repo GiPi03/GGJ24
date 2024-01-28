@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    
+
     public AIPath aiPath;
     public float speed = 10f;
     public int damage = 10;
@@ -22,19 +22,20 @@ public class Enemy : MonoBehaviour
     {
         playerPos = GameObject.FindGameObjectWithTag("Player").transform;
         aiPath.maxSpeed = speed;
-        aiDestinationSetter.target = playerPos;
+        
     }
     // Update is called once per frame
-    
-    public virtual void Update() {
 
-
+    public virtual void Update()
+    {
+        playerPos = GameObject.FindGameObjectWithTag("Player").transform;
+        aiDestinationSetter.target = playerPos;
 
     }
- 
+
     public virtual void Attack()
     {
-     
+
     }
 }
 

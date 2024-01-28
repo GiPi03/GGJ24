@@ -20,7 +20,7 @@ public class RangeEnemy : Enemy
     }
     public override void Update()
     {
-
+        base.Update();
         Vector2 dir = playerPos.position - transform.position;
         float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg-180;
         axis.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
