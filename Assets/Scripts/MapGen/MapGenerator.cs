@@ -12,7 +12,6 @@ public class MapGenerator : MonoBehaviour
     public Tile groundTile;
     public Tile wallTile;
     public float wallFillPercent;
-    public List<Vector2Int> region;
     public string seed;
     private void Update()
     {
@@ -50,25 +49,23 @@ public class MapGenerator : MonoBehaviour
        
         
     }
-    public int[,] GenerateMap(int seedInt)
+    public int[,] GenerateMap()
     {
         int[,] mapValues = new int[mapSize.x, mapSize.y];
-        mapValues = FillMapRandom(mapValues,seedInt);
+        mapValues = FillMapRandom(mapValues);
         for (int i = 0; i < 3; i++)
         {
             mapValues = SmoothMap(mapValues);
         }
         ProcessMap(mapValues);
-        region = GetRegions(mapValues, mapSize, 1)[0];
         mapValues = SetRandomFloorTiles(mapValues);
-        
         RenderMap(mapValues);
         return mapValues;
 
     }
-    public int[,] FillMapRandom(int[,] map,int seedInt)
+    public int[,] FillMapRandom(int[,] map)
     {
-        System.Random random = new System.Random(seedInt+seed.GetHashCode());
+        System.Random random = new System.Random(seed.GetHashCode());
         for (int x = 0; x < mapSize.x; x++)
         {
             for (int y = 0; y < mapSize.y; y++)
@@ -120,9 +117,9 @@ public class MapGenerator : MonoBehaviour
     }
     public void RenderMap(int[,] map)
     {
-        for (int x = -4; x < mapSize.x + 4; x++)
+        for (int x = -1; x < mapSize.x + 1; x++)
         {
-            for (int y = -4; y < mapSize.y + 4; y++)
+            for (int y = -1; y < mapSize.y + 1; y++)
             {
                 if (x >= 0 && x < mapSize.x && y >= 0 && y < mapSize.y)
                 {
