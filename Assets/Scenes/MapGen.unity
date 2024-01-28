@@ -283,7 +283,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 5.12, y: 5.12}
+    oldSize: {x: 1, y: 1}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -1064,7 +1064,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 5.12, y: 5.12}
+    oldSize: {x: 1, y: 1}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -1207,8 +1207,8 @@ MonoBehaviour:
   groundTile: {fileID: 11400000, guid: 434e60e7a7e1946498dc3d36b349eade, type: 2}
   wallTile: {fileID: 11400000, guid: 0371139b6b4e3d04c8785b1fbef31d22, type: 2}
   wallFillPercent: 46
-  region: []
   seed: DuHurensohnBistEineGuteMap
+  region: []
 --- !u!4 &1627748888
 Transform:
   m_ObjectHideFlags: 0
@@ -1260,11 +1260,15 @@ MonoBehaviour:
   - {fileID: 6936878267753519378, guid: a7a5bc1650a815e40aca92eb3b69e03b, type: 3}
   - {fileID: 8849158979689625702, guid: 68fc21669df2006468ee071659802d69, type: 3}
   - {fileID: 7468399981636804988, guid: ef210dc5f36f59e42961c14a3aa7dc7d, type: 3}
+  - {fileID: 2473818210569854166, guid: 7382be7e3a1e62b4a9b19018cddf15d6, type: 3}
+  vasePrefabs: []
   player: {fileID: 0}
   portalPrefab: {fileID: 2876527692896363545, guid: 2a3bd9b799f73844eb015f99d16d7823, type: 3}
-  minEnemy: 1
-  maxEnemy: 1
-  spawnEnemy: 1
+  minEnemy: 2
+  maxEnemy: 5
+  spawnEnemy: 10
+  spawnVase: 1
+  dialogCharacter: []
 --- !u!4 &1641832004
 Transform:
   m_ObjectHideFlags: 0
