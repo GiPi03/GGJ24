@@ -9,16 +9,21 @@ public class GameManager : MonoBehaviour
     public MapGenerator mapGenerator;
     public GameObject playerPrefab;
     public GameObject[] enemyPrefabs;
+    public GameObject[] vasePrefabs;
+
     public GameObject player = null;
     public GameObject portalPrefab;
     public int minEnemy = 1;
     public int maxEnemy = 20;
     public int spawnEnemy = 3;
+    public int spawnVase = 6;
     int[,] mapValue;
     int i = 1;
     bool allEnemyDead = false;
     void Start()
     {
+        
+        SpawnVase();
         DontDestroyOnLoad(mapGenerator);
         DontDestroyOnLoad(gameObject);
         DontDestroyOnLoad(mapGenerator.wallTilemap);
@@ -35,6 +40,26 @@ public class GameManager : MonoBehaviour
             SpawnPortal();
         }
         Debug.Log(GameObject.FindGameObjectsWithTag("Enemy").Length);
+    }
+ 
+    void SpawnVase()
+    {
+        Vector2Int spawnPos = new Vector2Int();
+        for (int i = 0; i < spawnVase; i++)
+        {
+            for (int x = 0; x < mapValue.GetLength(0); x++)
+            {
+                for (int y = 0; y < mapValue.GetLength(1); y++)
+                {
+                    if (mapValue[x, y] == 2)
+                    {
+                        spawnPos = new Vector2Int(x, y);
+                        break;
+                    }
+                }
+            }
+            Instantiate(vasePrefabs[Random.Range(0, vasePrefabs.Length)], new Vector3(spawnPos.x, spawnPos.y, 0), Quaternion.identity);
+        }
     }
     void SpawnPortal()
     {
