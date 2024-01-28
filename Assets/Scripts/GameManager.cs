@@ -17,13 +17,18 @@ public class GameManager : MonoBehaviour
     public int maxEnemy = 20;
     public int spawnEnemy = 3;
     public int spawnVase = 6;
+
+    public GameObject[] dialogCharacter;
+    
     int[,] mapValue;
     int i = 1;
     bool allEnemyDead = false;
+    int npcCounter = 0;
+    int npcMax = 3;
     void Start()
     {
         
-        SpawnVase();
+      
         DontDestroyOnLoad(mapGenerator);
         DontDestroyOnLoad(gameObject);
         DontDestroyOnLoad(mapGenerator.wallTilemap);
@@ -31,6 +36,7 @@ public class GameManager : MonoBehaviour
         player = SpawnPlayer();
         AstarPath.active.Scan();
         SpawnEnemies();
+        SpawnVase();
     }
     void Update()
     {
@@ -41,7 +47,11 @@ public class GameManager : MonoBehaviour
         }
         Debug.Log(GameObject.FindGameObjectsWithTag("Enemy").Length);
     }
- 
+    void SpawnNPC()
+    {
+
+        GameObject npc = Instantiate(dialogCharacter[0],(Vector3)(Vector2)mapGenerator.region[Random.Range(0,mapGenerator.region.Count)], Quaternion.identity);
+    }
     void SpawnVase()
     {
         Vector2Int spawnPos = new Vector2Int();
@@ -82,6 +92,15 @@ public class GameManager : MonoBehaviour
         spawnEnemy = Random.Range(minEnemy, maxEnemy);
         
         SpawnEnemies();
+        if(npcCounter >= npcMax)
+        {
+            SpawnNPC();
+            npcCounter = 0;
+        }
+        else
+        {
+            npcCounter++;
+        }
 
         allEnemyDead = false;
         i++;
