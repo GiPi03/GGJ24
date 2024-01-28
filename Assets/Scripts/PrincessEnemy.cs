@@ -4,6 +4,13 @@ using UnityEngine;
 
 public class PrincessEnemy : RangeEnemy
 {
-    // Start is called before the first frame update
-   
+    public Animator animator;
+    public void Update()
+    {
+        if (GetComponent<EnemyHealth>().health < 20f)
+        {
+            animator.SetTrigger("IsPrinzess");
+        }
+    }
+
 }

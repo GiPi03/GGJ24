@@ -2,21 +2,24 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerBullet : Bullet
+public class PrinzessBullet : Bullet
 {
     public Sprite[] bullets;
     void Start()
     {
         GetComponent<SpriteRenderer>().sprite = bullets[Random.Range(0, bullets.Length)];
     }
-   
     protected override void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Enemy")
+        if (collision.gameObject.tag == "Player")
         {
-            collision.gameObject.GetComponent<EnemyHealth>().SubHealth(damage);
+            collision.gameObject.GetComponent<GiSchwanz>().SubHealth(damage);
             Destroy(gameObject);
         }
-        Destroy(gameObject);
-    } 
+        if(collision.gameObject.GetComponent<PrinzessBullet>() == null)
+        {
+            Destroy(gameObject);
+        }
+       
+    }
 }
