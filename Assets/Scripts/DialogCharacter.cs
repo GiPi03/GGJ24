@@ -5,7 +5,7 @@ using UnityEngine;
 public class DialogCharacter : MonoBehaviour
 {
     public List<int> dialogIDs;
-    DialogSystem dialogSystem;
+    public DialogSystem dialogSystem;
     Transform playerPos;
     DialogPanel currentPanel = null;
 

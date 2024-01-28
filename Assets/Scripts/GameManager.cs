@@ -19,24 +19,27 @@ public class GameManager : MonoBehaviour
     public int maxEnemy = 20;
     public int spawnEnemy = 3;
     public int spawnVase = 6;
-
+    public int ogNPCSize;
+    public GameObject Boss;
     public GameObject[] dialogCharacter;
+    public GameObject currentNPC;
 
     int[,] mapValue;
     int i = 1;
     bool allEnemyDead = false;
     int npcCounter = 0;
-    int npcMax = 3;
+    int npcMax = 0;
     void Start()
     {
 
-
+        ogNPCSize = dialogCharacter.Length;
         DontDestroyOnLoad(mapGenerator);
         DontDestroyOnLoad(gameObject);
         DontDestroyOnLoad(mapGenerator.wallTilemap);
         mapValue = mapGenerator.GenerateMap(0);
         player = SpawnPlayer();
         AstarPath.active.Scan();
+        SpawnNPC();
         SpawnEnemies();
         SpawnVase();
     }
@@ -51,14 +54,29 @@ public class GameManager : MonoBehaviour
     }
     void SpawnNPC()
     {
-        if (dialogCharacter.Length != 0)
+
+        if (dialogCharacter.Length > 0)
         {
 
+            if (dialogCharacter.Length == ogNPCSize)
+            {
+                Destroy(currentNPC); currentNPC = null;
+                GameObject npca = Instantiate(dialogCharacter[0], (Vector3)(Vector2)mapGenerator.region[Random.Range(0, mapGenerator.region.Count)], Quaternion.identity);
+                List<GameObject> dialogCharacteree = dialogCharacter.ToList();
+                dialogCharacteree.RemoveAt(0);
+                dialogCharacter = dialogCharacteree.ToArray();
+                currentNPC = npca;
 
-            GameObject npc = Instantiate(dialogCharacter[0], (Vector3)(Vector2)mapGenerator.region[Random.Range(0, mapGenerator.region.Count)], Quaternion.identity);
-            List<GameObject> dialogCharactere = dialogCharacter.ToList();
-            dialogCharactere.RemoveAt(0);
-            dialogCharacter = dialogCharactere.ToArray();
+            }
+            else
+            {
+                Destroy(currentNPC); currentNPC = null;
+                GameObject npc = Instantiate(dialogCharacter[0], (Vector3)(Vector2)mapGenerator.region[Random.Range(0, mapGenerator.region.Count)], Quaternion.identity);
+                List<GameObject> dialogCharactere = dialogCharacter.ToList();
+                dialogCharactere.RemoveAt(0);
+                dialogCharacter = dialogCharactere.ToArray();
+                currentNPC = npc;
+            }
         }
         else
         {
@@ -121,7 +139,7 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-            
+
         }
         i++;
     }
@@ -157,6 +175,6 @@ public class GameManager : MonoBehaviour
     }
     void SpawnBoss()
     {
-
+        GameObject npc = Instantiate(Boss, (Vector3)(Vector2)mapGenerator.region[Random.Range(0, mapGenerator.region.Count)], Quaternion.identity);
     }
 }

@@ -11,9 +11,8 @@ GameObject:
   - component: {fileID: 5634287844702654745}
   - component: {fileID: 3232616854875217654}
   - component: {fileID: 5127263194505000465}
-  - component: {fileID: 724158205953123604}
   m_Layer: 0
-  m_Name: RatDude3
+  m_Name: RatDudeTutorial
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -75,7 +74,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 8
-  m_Sprite: {fileID: 1750126625, guid: 3193e0a36bf5efd469c6f143247ce4b2, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1d1b13e6f507bc64e9ffc283c7695201, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -98,26 +97,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3672edc5e593ca94aaf14b90427ec1bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogIDs: 03000000
+  dialogIDs: 0b000000
   dialogSystem: {fileID: 0}
---- !u!95 &724158205953123604
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 533755171229393448}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 166b4be72b8dbd3418c86eaca15d30f3, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0

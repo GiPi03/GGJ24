@@ -1322,15 +1322,19 @@ MonoBehaviour:
   player: {fileID: 0}
   portalPrefab: {fileID: 2876527692896363545, guid: 2a3bd9b799f73844eb015f99d16d7823, type: 3}
   minEnemy: 2
-  maxEnemy: 5
-  spawnEnemy: 1
+  maxEnemy: 4
+  spawnEnemy: 0
   spawnVase: 1
+  ogNPCSize: 0
+  Boss: {fileID: 5194525599901728091, guid: 2ec7ee5c105cd6648805138b00d27479, type: 3}
   dialogCharacter:
+  - {fileID: 533755171229393448, guid: 6e5c7889475d11a4cb51457dfcd4bd39, type: 3}
   - {fileID: 533755171229393448, guid: 8686599594e1950498a941d22e7ec86a, type: 3}
   - {fileID: 533755171229393448, guid: d6969668ef18f8a439bb3e37d5ee6495, type: 3}
   - {fileID: 533755171229393448, guid: add02a73cdf3ae6458022b18d3ef94f8, type: 3}
   - {fileID: 533755171229393448, guid: 48ad9a82069bd264483733162ffdcc5d, type: 3}
   - {fileID: 533755171229393448, guid: 6103149e0b6bca6498d0ebacf8dca25e, type: 3}
+  currentNPC: {fileID: 0}
 --- !u!4 &1641832004
 Transform:
   m_ObjectHideFlags: 0
