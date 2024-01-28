@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PrincessEnemy : RangeEnemy
 {
@@ -11,9 +12,11 @@ public class PrincessEnemy : RangeEnemy
         if (GetComponent<EnemyHealth>().health < 20f)
         {
             animator.SetBool("isHealed",true);
+            GetComponent<EnemyHealth>().enabled = false;
+            GetComponent<Enemy>().enabled = false;
+            StartCoroutine(ShowEndScreen());
         }
-        GetComponent<EnemyHealth>().enabled = false;
-        GetComponent<Enemy>().enabled = false;
+        
     }
     public override void Attack()
     {
@@ -23,7 +26,7 @@ public class PrincessEnemy : RangeEnemy
     IEnumerator ShowEndScreen()
     {
         yield return new WaitForSeconds(3f);
-        GameObject.Find("EndScreen").SetActive(true);
+        SceneManager.LoadScene("Win1");
     }
 
 }

@@ -51,11 +51,19 @@ public class GameManager : MonoBehaviour
     }
     void SpawnNPC()
     {
+        if (dialogCharacter.Length != 0)
+        {
 
-        GameObject npc = Instantiate(dialogCharacter[0], (Vector3)(Vector2)mapGenerator.region[Random.Range(0, mapGenerator.region.Count)], Quaternion.identity);
-        List<GameObject> dialogCharactere = dialogCharacter.ToList();
-        dialogCharactere.RemoveAt(0);
-        dialogCharacter = dialogCharactere.ToArray();
+
+            GameObject npc = Instantiate(dialogCharacter[0], (Vector3)(Vector2)mapGenerator.region[Random.Range(0, mapGenerator.region.Count)], Quaternion.identity);
+            List<GameObject> dialogCharactere = dialogCharacter.ToList();
+            dialogCharactere.RemoveAt(0);
+            dialogCharacter = dialogCharactere.ToArray();
+        }
+        else
+        {
+            SpawnBoss();
+        }
     }
     void SpawnVase()
     {
