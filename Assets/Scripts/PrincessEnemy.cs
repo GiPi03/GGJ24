@@ -20,5 +20,10 @@ public class PrincessEnemy : RangeEnemy
         base.Attack();
         animator.SetTrigger("IsAttack");
     }
+    IEnumerator ShowEndScreen()
+    {
+        yield return new WaitForSeconds(3f);
+        GameObject.Find("EndScreen").SetActive(true);
+    }
 
 }
